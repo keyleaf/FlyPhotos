@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'preview',
+  selector: 'preview-component',
   templateUrl: './preview.component.html',
-  styleUrls: []
+  styleUrls: ['./preview.component.css']
 })
 export class PreviewComponent {
 
