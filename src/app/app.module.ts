@@ -4,9 +4,13 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {routing} from './app.routing'
 
+// components
 import {AppComponent} from './app.component';
 import {PreviewComponent} from './detail/preview.component';
 import {DetailComponent} from './detail/detail.component';
+
+//services
+import {PhotosService} from './services/photos.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,7 @@ import {DetailComponent} from './detail/detail.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [PhotosService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
