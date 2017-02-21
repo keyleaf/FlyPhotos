@@ -8,15 +8,18 @@ import {routing} from './app.routing'
 import {AppComponent} from './app.component';
 import {PreviewComponent} from './detail/preview.component';
 import {DetailComponent} from './detail/detail.component';
+import {RegisterComponent} from './login/register.component';
 
 //services
 import {PhotosService} from './services/photos.service';
+import {RegisterService} from './services/register.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PreviewComponent,
-    DetailComponent
+    DetailComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,10 @@ import {PhotosService} from './services/photos.service';
     HttpModule,
     routing
   ],
-  providers: [PhotosService],
+  providers: [
+    PhotosService,
+    RegisterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

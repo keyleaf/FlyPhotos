@@ -2,15 +2,21 @@ import {ModuleWithProviders} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {PreviewComponent} from './detail/preview.component';
 import {DetailComponent} from './detail/detail.component'
+import {RegisterComponent} from './login/register.component'
 
 const appRoutes: Routes = [
-  {
-    path: '',
-    component: PreviewComponent
-  },
+
   {
     path: 'detail',
     component: DetailComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: '',
+    component: PreviewComponent
   }
 ];
 

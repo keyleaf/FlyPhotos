@@ -1,4 +1,4 @@
-.head{
+.head {
   background: #222;
   background-repeat: no-repeat;
   background-position: center 0;
@@ -12,34 +12,37 @@
 }
 
 .logotxt {
-   font-weight: 700;
+  font-weight: 700;
   color: #fff;
   font-size: 64px;
 }
 
-.head h2{
+.head h2 {
   color: #fff;
   padding: 0;
   margin: 0 0 45px;
   font-weight: 100;
   font-size: 34px;
 }
-.logoimg{
+
+.logoimg {
   position: absolute;
   left: 1%;
   right: 1%;
   bottom: -34px;
 }
+
 .main {
   margin-top: 90px;
 }
-.main-footer{
+
+.main-footer {
   background: #202020;
   padding: 35px 0 0;
   color: #959595;
 }
 
-.copyright{
+.copyright {
   background: #111;
   font-size: 13px;
   text-align: center;
@@ -48,3 +51,13 @@
   padding-bottom: 20px;
   border-top: 1px solid #303030;
 }
+
+a:link, :visited {
+  color: #9d9d9d  !important;
+}
+
+a:hover, :active {
+  color: #ffffff !important;
+}
+
+
