@@ -1,7 +1,9 @@
+'use strict';
+
 var router = require('koa-router')();
 
-router.post('/', function *() {
-  this.body = 'Hello World'
+router.post('/getPhotos', function *() {
+  this.body = [];
 });
 
 module.exports = router;
