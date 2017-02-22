@@ -3,11 +3,15 @@ import {Headers, Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class RegisterService{
+export class RegisterService {
   private headers = new Headers({'Content-Type': 'application/json'});
-f
-  constructor(private http:Http){
 
+  constructor(private http: Http) {
+
+  }
+
+  registerUser(user) {
+    return this.http.post('/registerUser', JSON.stringify(user), {headers: this.headers}).toPromise();
   }
 
 }

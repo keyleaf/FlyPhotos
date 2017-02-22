@@ -1,14 +1,18 @@
 <div class="head">
-  <nav class="navbar navbar-default navbar-fixed-top"
-       style=" filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.5; background-color: #202020">
+  <nav class="navbar navbar-default navbar-fixed-top navbarTransparent">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">Fly Photos</a>
+        <a class="navbar-brand" routerLink="/">Fly Photos</a>
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="" routerLink="/register">注 册</a></li>
-          <li><a href="#">登 陆</a></li>
+          <li><a href="" routerLink="/">登 陆</a></li>
         </ul>
       </div>
     </div>
@@ -21,14 +25,13 @@
       <div class="col-xl-12 logotxt">
         <h1>Fly Photos</h1>
       </div>
-      <h2>飞翔的图片</h2>
+      <h2>飘扬的图片</h2>
     </div>
   </div>
 </div>
 <div class="main">
   <router-outlet></router-outlet>
 </div>
-
 <div class="copyright">
-  Copyright © FlyPhoto
+  Copyright © FlyPhotos
 </div>
