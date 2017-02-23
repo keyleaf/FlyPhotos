@@ -10,6 +10,9 @@ import {PreviewComponent} from './detail/preview.component';
 import {DetailComponent} from './detail/detail.component';
 import {RegisterComponent} from './login/register.component';
 
+// directive
+import {WaterfallDirective} from './components/waterfall.directive';
+
 //services
 import {PhotosService} from './services/photos.service';
 import {RegisterService} from './services/register.service';
@@ -19,7 +22,8 @@ import {RegisterService} from './services/register.service';
     AppComponent,
     PreviewComponent,
     DetailComponent,
-    RegisterComponent
+    RegisterComponent,
+    WaterfallDirective
   ],
   imports: [
     BrowserModule,

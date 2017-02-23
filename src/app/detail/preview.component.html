@@ -1,16 +1,13 @@
 <div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-md-3" *ngFor="let foo of list">
-      <article class="post tag-ad">
-        <h2 class="post-title">
-          <a href="#" >标题</a>
-        </h2>
-        <div class="post-featured-image">
-          <a class="thumbnail loaded" routerLink="detail">
-            <img src="http://image.youzhan.org/f/11/5f6a450fc7987ec7c64dc9fb8c9c3.png!thumb" width="700" height="438" alt="标题">
-          </a>
+  <div class=" waterfall">
+    <div class="pin" *ngFor="let foo of list" >
+      <div class="thumbnail">
+        <img src="http://lorempixel.com/200/200/abstract" *ngIf="foo%3!=0">
+        <div class="caption">
+          <h3>Thumbnail label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </div>
