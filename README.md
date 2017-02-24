@@ -1,5 +1,3 @@
 # FlyPhotos
-photos show
-test submit
 
-test submit2
+#init DB

@@ -13,6 +13,7 @@ var env = require('./env');
 app.use(bodyParser());
 // 引用所有静态文件
 app.use(serve(__dirname + '/../dist'));
+app.use(serve(__dirname + '/../upload'));
 
 // 引用所有请求
 app.use(requestAPI.routes());
