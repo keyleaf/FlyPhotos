@@ -25,7 +25,9 @@ export class RegisterComponent {
   }
 
   submitUser() {
-    
+    /*this.service.registerUser(this.user).then(response =>{
+
+    });*/
     alert('暂未开放。');
   }
 

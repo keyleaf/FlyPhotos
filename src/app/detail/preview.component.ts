@@ -7,11 +7,12 @@ import {PhotosService} from '../services/photos.service';
   templateUrl: './preview.component.html',
   styleUrls: ['./preview.component.css']
 })
-export class PreviewComponent {
+export class PreviewComponent{
   private list:any[]= [];
   constructor(private service : PhotosService){
     service.getPhotos().then(response =>{
       this.list = response.json();
     });
+
   }
 }
