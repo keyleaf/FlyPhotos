@@ -52,11 +52,11 @@
   border-top: 1px solid #303030;
 }
 
-a:link, :visited {
+.navbar-header a:link, a:visited {
   color: #9d9d9d !important;
 }
 
-a:hover, :active {
+.navbar-header a:hover, a:active {
   color: #ffffff !important;
 }
 
