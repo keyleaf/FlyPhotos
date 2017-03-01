@@ -14,4 +14,8 @@ export class RegisterService {
     return this.http.post('/registerUser', JSON.stringify(user), {headers: this.headers}).toPromise();
   }
 
+  getCaptcha(){
+    return this.http.get("/getCaptcha?_r="+Math.random()).toPromise();
+  }
+
 }

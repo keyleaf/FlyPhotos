@@ -22,6 +22,6 @@ exports.UserDomain = {
       email: user.email,
       valid: user.valid
     });
-    return
+    return param.findOneAndUpdate({id:mongoose.Types.ObjectId()});
   }
 };

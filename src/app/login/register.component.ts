@@ -17,8 +17,10 @@ export class RegisterComponent {
     replayPassword: '',
     petName: '',
     email: '',
-    submitFlag: false
+    submitFlag: false,
+    captcha:''
   };
+  private captcha = '/getCaptcha';
 
   constructor(private service: RegisterService) {
 
@@ -35,5 +37,9 @@ export class RegisterComponent {
     if (this.user.password && this.user.replayPassword && this.user.password != this.user.replayPassword) {
 
     }
+  }
+
+  refreshCaptcha(){
+      this.captcha = '/getCaptcha?_i=' + Math.random();
   }
 }
