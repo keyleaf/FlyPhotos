@@ -2,7 +2,7 @@
   <div class="row marginBottom15px">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <div class="input-group">
-        <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;账号 * </span>
+        <span class="input-group-addon paddingL40">账号 * </span>
         <input type="text" class="form-control" placeholder="账 号" aria-describedby="basic-addon1" [(ngModel)]="user.account">
       </div>
     </div>
@@ -10,7 +10,7 @@
   <div class="row marginBottom15px">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <div class="input-group">
-        <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码 * </span>
+        <span class="input-group-addon paddingL40">密码 * </span>
         <input type="password" class="form-control" placeholder="密码" aria-describedby="basic-addon1" [(ngModel)]="user.password" (blur)="validationPassword()">
       </div>
     </div>
@@ -26,7 +26,7 @@
   <div class="row marginBottom15px">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <div class="input-group">
-        <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;昵称 * </span>
+        <span class="input-group-addon paddingL40">昵称 * </span>
         <input type="text" class="form-control" placeholder="昵 称" aria-describedby="basic-addon1" [(ngModel)]="user.petName">
       </div>
     </div>
@@ -34,8 +34,17 @@
   <div class="row marginBottom15px">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
       <div class="input-group">
-        <span class="input-group-addon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱 * </span>
+        <span class="input-group-addon paddingL40">邮箱 * </span>
         <input type="email" class="form-control" placeholder="邮 箱" aria-describedby="basic-addon1"[(ngModel)]="user.email">
+      </div>
+    </div>
+  </div>
+  <div class="row marginBottom15px">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <div class="input-group">
+        <span class="input-group-addon paddingL30">验证码 * </span>
+        <input type="email" class="form-control" placeholder="验证码" aria-describedby="basic-addon1"[(ngModel)]="user.captcha">
+        <span class="input-group-addon"><img [src]="captcha" class="captcha" (click)="refreshCaptcha()"/></span>
       </div>
     </div>
   </div>
