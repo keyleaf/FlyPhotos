@@ -1,9 +1,6 @@
 import {Component} from '@angular/core';
-import {} from ''
 
 import {RegisterService} from '../services/register.service';
-
-declare var $: any;
 
 @Component({
   selector: 'register-component',
@@ -17,8 +14,10 @@ export class RegisterComponent {
     replayPassword: '',
     petName: '',
     email: '',
-    submitFlag: false
+    submitFlag: false,
+    captcha: ''
   };
+  private captcha = '/getCaptcha';
 
   constructor(private service: RegisterService) {
 
@@ -27,7 +26,7 @@ export class RegisterComponent {
   submitUser() {
     /*this.service.registerUser(this.user).then(response =>{
 
-    });*/
+     });*/
     alert('暂未开放。');
   }
 
@@ -35,5 +34,9 @@ export class RegisterComponent {
     if (this.user.password && this.user.replayPassword && this.user.password != this.user.replayPassword) {
 
     }
+  }
+
+  refreshCaptcha() {
+    this.captcha = '/getCaptcha?_i=' + Math.random();
   }
 }

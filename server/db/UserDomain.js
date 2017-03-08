@@ -22,6 +22,19 @@ exports.UserDomain = {
       email: user.email,
       valid: user.valid
     });
-    return
+    return param.findOneAndUpdate({id: mongoose.Types.ObjectId()});
+  },
+
+  findByParam: user => {
+    return User.findOne({
+      account: user.account,
+      password: md5(user.password)
+    }).exec((err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        return result;
+      }
+    });
   }
 };
