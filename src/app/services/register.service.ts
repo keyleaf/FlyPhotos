@@ -10,12 +10,16 @@ export class RegisterService {
 
   }
 
-  registerUser(user) {
+  registerUser(user:any) {
     return this.http.post('/registerUser', JSON.stringify(user), {headers: this.headers}).toPromise();
   }
 
-  getCaptcha(){
-    return this.http.get("/getCaptcha?_r="+Math.random()).toPromise();
+  getCaptcha() {
+    return this.http.get("/getCaptcha?_r=" + Math.random()).toPromise();
+  }
+
+  login(user:any) {
+    return this.http.post("/login", JSON.stringify({user: user}), {headers: this.headers}).toPromise();
   }
 
 }

@@ -1,9 +1,6 @@
 import {Component} from '@angular/core';
-import {} from ''
 
 import {RegisterService} from '../services/register.service';
-
-declare var $: any;
 
 @Component({
   selector: 'register-component',
@@ -18,7 +15,7 @@ export class RegisterComponent {
     petName: '',
     email: '',
     submitFlag: false,
-    captcha:''
+    captcha: ''
   };
   private captcha = '/getCaptcha';
 
@@ -29,7 +26,7 @@ export class RegisterComponent {
   submitUser() {
     /*this.service.registerUser(this.user).then(response =>{
 
-    });*/
+     });*/
     alert('暂未开放。');
   }
 
@@ -39,7 +36,7 @@ export class RegisterComponent {
     }
   }
 
-  refreshCaptcha(){
-      this.captcha = '/getCaptcha?_i=' + Math.random();
+  refreshCaptcha() {
+    this.captcha = '/getCaptcha?_i=' + Math.random();
   }
 }
