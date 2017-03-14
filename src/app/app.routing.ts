@@ -11,7 +11,7 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'detail',
+    path: 'detail/:id',
     component: DetailComponent
   },
   {

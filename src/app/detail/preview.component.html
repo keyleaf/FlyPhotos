@@ -1,7 +1,7 @@
 <div class="container">
   <div class="waterfall">
     <div class="pin" *ngFor="let photo of list">
-      <a href="" routerLink="detail">
+      <a href="" routerLink="detail/{{photo._id}}">
         <img src="{{photo.photoUrl}}">
       </a>
       <h3>{{photo.title}}</h3>
