@@ -10,6 +10,10 @@ router.get('/getPhotos', function *() {
   this.body = yield photosDomain.getAllPhotos();
 });
 
+router.post('/getPhotoById', function *() {
+    this.body = yield photosDomain.getPhotoById(this.request.body.id);
+});
+
 router.get('/getCaptcha', function *() {
   let captcha = parseInt(Math.random() * 9000 + 1000);
   var p = new captchapng(80, 30, captcha); // width,height,numeric captcha

@@ -20,5 +20,14 @@ exports.PhotosDomain = {
         return result;
       }
     });
+  },
+  getPhotoById: (id) => {
+    return Photos.findOne({_id: mongoose.Types.ObjectId(id)}, (err, result) => {
+      if (err) {
+        console.log('error ' + err);
+      } else {
+        return result;
+      }
+    })
   }
 };

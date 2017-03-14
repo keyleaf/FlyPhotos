@@ -1,13 +1,13 @@
 <div class="container">
-  <div class="row">
+  <div class="row">{{photoDetail}}
     <div class="col-xs-12 col-md-12">
       <article class="post tag-ad">
         <h2 class="post-title">
-          <a href="#" >标题</a>
+          {{photoDetail.title}}
         </h2>
         <div class="post-featured-image">
-          <div class="thumbnail loaded" routerLink="detail">
-            <img src="http://image.youzhan.org/f/11/5f6a450fc7987ec7c64dc9fb8c9c3.png!thumb" width="700" height="438" alt="标题">
+          <div class="thumbnail loaded">
+            <img src="{{photoDetail.photoUrl}}">
           </div>
         </div>
       </article>
