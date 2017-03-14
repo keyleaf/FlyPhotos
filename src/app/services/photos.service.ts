@@ -3,14 +3,18 @@ import {Headers, Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class PhotosService{
+export class PhotosService {
   private headers = new Headers({'Content-Type': 'application/json'});
 
-  constructor(private http:Http){
+  constructor(private http: Http) {
 
   }
 
-  getPhotos(){
+  getPhotos() {
     return this.http.get('/getPhotos').toPromise();
+  }
+
+  getPhotoById(id: String) {
+    return this.http.post('/getPhotoById', id, {headers: this.headers}).toPromise();
   }
 }

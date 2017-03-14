@@ -12,7 +12,11 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li><a href="" routerLink="/register">注 册</a></li>
-          <li><a href="" routerLink="/">登 陆</a></li>
+          <li><a href="" routerLink="/login" *ngIf="!user || !user.petName">登 陆</a></li>
+        </ul>
+        <ul class="nav navbar-nav  navbar-right" *ngIf="user && user.petName">
+          <p class="navbar-text">欢迎您，{{user.petName}}</p>
+          <li><a href="" routerLink="" (click)="logout()">退 出</a></li>
         </ul>
       </div>
     </div>

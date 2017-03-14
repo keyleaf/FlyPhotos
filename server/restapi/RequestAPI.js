@@ -4,10 +4,14 @@ let router = require('koa-router')();
 let captchapng = require('captchapng');
 
 let photosDomain = require('../db/PhotosDomain').PhotosDomain;
-
+let userDomain = require('../db/UserDomain').UserDomain;
 
 router.get('/getPhotos', function *() {
   this.body = yield photosDomain.getAllPhotos();
+});
+
+router.post('/getPhotoById', function *() {
+    this.body = yield photosDomain.getPhotoById(this.request.body.id);
 });
 
 router.get('/getCaptcha', function *() {
@@ -18,7 +22,16 @@ router.get('/getCaptcha', function *() {
   var img = p.getBase64();
   var imgbase64 = new Buffer(img, 'base64');
   this.set('Content-Type', 'image/png');
-  this.body = {src: imgbase64, captcha: captcha};
+  this.body = imgbase64;
+});
+
+router.post("/login", function *() {
+  let user = yield userDomain.findByParam(this.request.body.user);
+  if(user){
+    this.body = {info:'Success', user:user};
+  } else{
+    this.body = {info:"Fail"};
+  }
 });
 
 module.exports = router;

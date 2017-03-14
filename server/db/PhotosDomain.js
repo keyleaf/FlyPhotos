@@ -3,22 +3,31 @@ let mongoose = require('./mongooseDomain').mongoose;
 let Schema = mongoose.Schema;
 
 let PhotosSchema = new Schema({
-  comment:{type:Schema.Types.ObjectId, ref:'Comment'},
-  photoUrl : {type:String},
-  title : {type:String},
-  content:{type:String}
+  comment: {type: Schema.Types.ObjectId, ref: 'Comment'},
+  photoUrl: {type: String},
+  title: {type: String},
+  content: {type: String}
 });
 
 let Photos = mongoose.model('Photos', PhotosSchema, 'Photos');
 
 exports.PhotosDomain = {
-  getAllPhotos : () =>{
-    return Photos.find((err, result) =>{
-      if(err){
+  getAllPhotos: () => {
+    return Photos.find((err, result) => {
+      if (err) {
         console.log('error ' + err);
-      }else{
+      } else {
         return result;
       }
     });
+  },
+  getPhotoById: (id) => {
+    return Photos.findOne({_id: mongoose.Types.ObjectId(id)}, (err, result) => {
+      if (err) {
+        console.log('error ' + err);
+      } else {
+        return result;
+      }
+    })
   }
 };
